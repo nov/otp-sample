@@ -1,0 +1,11 @@
+<dl>
+  <dt>Identifier</dt>
+  <dd><%= current_account.identifier %></dd>
+  <dt>OTP Seed</dt>
+  <dd><%= current_account.otp_seed %></dd>
+  <dt>OTP Provisioning URI</dt>
+  <dd><%= link_to current_account.provisioning_uri, current_account.provisioning_uri %></dd>
+  <dd><%= image_tag current_account.provisioning_uri(:qr_code) %>
+</dl>
+
+<%= link_to :logout, session_path, method: :delete %>

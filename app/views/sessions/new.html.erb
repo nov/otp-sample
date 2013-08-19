@@ -1,0 +1,10 @@
+<%= form_for :account, url: account_path do |f| %>
+  <%= f.text_field :identifier, placeholder: :identifier %>
+  <%= f.submit 'signup' %>
+<% end %>
+
+<%= form_for :account, url: session_path do |f| %>
+  <%= f.text_field :identifier, placeholder: :identifier %>
+  <%= f.text_field :otp, placeholder: :otp %>
+  <%= f.submit 'login' %>
+<% end %>

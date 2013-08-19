@@ -14,9 +14,12 @@
 ActiveRecord::Schema.define(version: 20130819081246) do
 
   create_table "accounts", force: true do |t|
+    t.string   "identifier", null: false
     t.string   "otp_seed",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "accounts", ["identifier"], name: "index_accounts_on_identifier", unique: true
 
 end
